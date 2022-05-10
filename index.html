@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="card">
+        <h1 class="card__titulo">To Do list</h1>
+        <div class="card__division">
+          <form class="form" action="">
+            <input
+              type="text"
+              name="tarea"
+              class="form__input-text"
+              placeholder="Ingrece la tarea"
+              data-from-input
+            />
+            <button type="submit" class="btn" data-btn>
+              Agregar
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <div class="card__division">
+          <ul class="tasks" data-tasks></ul>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

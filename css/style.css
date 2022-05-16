@@ -45,9 +45,12 @@ html {
   -moz-text-fill-color: transparent;
 }
 .form {
+  margin-bottom: 2rem;
+}
+.form__top-content {
   width: 100%;
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -89,11 +92,15 @@ html {
   padding: 15px;
   box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
 }
+
 .icono-completo {
   color: rgba(62, 161, 219, 1);
 }
+
 .fa-square-check {
   cursor: pointer;
+}
+.fa-square-check:hover {
   color: rgba(62, 161, 219, 1);
 }
 .task__texto {

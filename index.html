@@ -24,24 +24,33 @@
         <h1 class="card__titulo">To Do list</h1>
         <div class="card__division">
           <form class="form" action="">
+           <div class="form__top-content">
+             <input
+               type="text"
+               name="tarea"
+               class="form__input-text"
+               placeholder="Ingrece la tarea"
+               data-from-input
+             />
+             <button type="submit" class="btn" data-btn>
+               Agregar
+               <i class="fa-solid fa-plus"></i>
+              </button>
+           </div>
             <input
-              type="text"
-              name="tarea"
-              class="form__input-text"
-              placeholder="Ingrece la tarea"
-              data-from-input
+            class="form__date"
+              type="datetime-local"
+              data-form-date
+              placeholder="YYYY/MM/DD"
             />
-            <button type="submit" class="btn" data-btn>
-              Agregar
-              <i class="fa-solid fa-plus"></i>
-            </button>
+          </div>
           </form>
-        </div>
         <div class="card__division">
           <ul class="tasks" data-tasks></ul>
         </div>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>

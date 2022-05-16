@@ -85,6 +85,10 @@ html {
   height: 60vh;
   padding-bottom: 1rem;
 }
+.date {
+  width: 100%;
+  padding: 15px;
+}
 .task {
   display: flex;
   justify-content: space-between;

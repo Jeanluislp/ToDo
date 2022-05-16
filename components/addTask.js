@@ -1,5 +1,6 @@
 import addCheck from "./taskComplete.js";
 import createDeleteIcon from "./deleteTask.js";
+import { displayTasks } from "./displayTask.js";
 
 export const addTask = (e) => {
   e.preventDefault();
@@ -15,15 +16,22 @@ export const addTask = (e) => {
     return;
   }
   input.value = "";
+  calendar.value = "";
 
   const taskObj = {
     valorInput,
     calendarFormat,
   };
-  tasks.appendChild(crearTarea(taskObj));
+  tasks.innerHTML = "";
+
+  const taskList = JSON.parse(localStorage.getItem("ToDoTaks")) || [];
+  taskList.push(taskObj);
+  localStorage.setItem("ToDoTaks", JSON.stringify(taskList));
+
+  displayTasks();
 };
 
-const crearTarea = ({ valorInput, calendarFormat }) => {
+export const crearTarea = ({ valorInput, calendarFormat }) => {
   const tarea = document.createElement("li");
   tarea.classList.add("task");
 

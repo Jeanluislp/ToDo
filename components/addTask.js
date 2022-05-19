@@ -61,7 +61,7 @@ export const crearTarea = ({ valorInput, calendarFormat, complete, id }) => {
 
   tarea.appendChild(taskContent);
   tarea.appendChild(dateElement);
-  tarea.appendChild(createDeleteIcon());
+  tarea.appendChild(createDeleteIcon(id));
 
   return tarea;
 };

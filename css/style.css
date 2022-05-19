@@ -68,6 +68,7 @@ html {
 }
 
 .btn {
+  cursor: pointer;
   padding: 10px;
   font-size: 1.125rem;
   background-color: #a1eafb;
@@ -76,6 +77,10 @@ html {
   font-weight: 600;
   border: none;
 }
+.btn:hover {
+  background-color: #46dcff;
+}
+
 .tasks {
   display: flex;
   flex-direction: column;

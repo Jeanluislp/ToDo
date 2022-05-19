@@ -18,9 +18,13 @@ export const addTask = (e) => {
   input.value = "";
   calendar.value = "";
 
+  const complete = false;
+
   const taskObj = {
     valorInput,
     calendarFormat,
+    complete,
+    id: uuid.v4(),
   };
   tasks.innerHTML = "";
 
@@ -31,17 +35,24 @@ export const addTask = (e) => {
   displayTasks();
 };
 
-export const crearTarea = ({ valorInput, calendarFormat }) => {
+export const crearTarea = ({ valorInput, calendarFormat, complete, id }) => {
   const tarea = document.createElement("li");
   tarea.classList.add("task");
 
   const taskContent = document.createElement("div");
 
+  const check = addCheck(id);
+  if (complete) {
+    check.classList.toggle("fas");
+    check.classList.toggle("far");
+    check.classList.toggle("icono-completo");
+  }
+
   const taskText = document.createElement("span");
   taskContent.classList.add("task__contenedor-izquierdar");
   taskText.classList.add("task__texto");
   taskText.innerHTML = valorInput;
-  taskContent.appendChild(addCheck());
+  taskContent.appendChild(check);
   taskContent.appendChild(taskText);
 
   const dateElement = document.createElement("span");
